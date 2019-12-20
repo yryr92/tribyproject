@@ -1,0 +1,973 @@
+div {
+	box-sizing: border-box;
+}
+
+.outer {
+	width: 50%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.profileWrap {
+	flex: 1 0 100%;
+	width: 100%;
+	display: flex;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	background: gray;
+}
+
+.infoWrap {
+	display: flex;
+	width: 100%;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.navWrap {
+	flex: 0 0 18%;
+}
+
+.contentWrap {
+	flex: 1 1 100%;
+}
+
+.profile {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 50px 0;
+}
+
+.navWrap ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.subnav {
+	display: flex;
+	align-items: center;
+}
+
+.subnav * {
+	margin-right: 60px;
+	font-size: 30px;
+}
+
+.nav {
+	display: block;
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+.nothave {
+	align-items: center;
+	margin-top: 100px;
+}
+
+.nothave p {
+	color: gray;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.tagactive {
+	color: rgb(11, 140, 140) !important;
+	font-weight: bold;
+}
+
+.myTribyListWrap {
+	margin-top: 60px;
+}
+
+.triby {
+	margin-right: 20px;
+	margin-bottom: 60px;
+	flex: 0 0 calc(33.33% - 20px);
+	width: calc(33.33% - 20px);
+	max-width: 280px;
+}
+
+.tribythumb {
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.tribytop {
+	position: relative;
+}
+
+.likebtn {
+	position: absolute;
+	background: transparent;
+	top: 0;
+	right: 0;
+	margin-top: 10px;
+	margin-right: 10px;
+	width: 24px;
+	height: 24px;
+	z-index: 1;
+}
+
+.likebtn img {
+	width: 100%;
+	height: 100%;
+}
+
+.tribythumb img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.tribythumb:before {
+	content: "";
+	display: block;
+	padding-bottom: 75%;
+}
+
+.tribyprice {
+	margin-top: 6px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.tribyname {
+	margin-top: 6px;
+	font-size: 18px;
+	font-weight: 800;
+}
+
+.tribyPoint{
+	display:flex;
+	align-items: center;
+	
+}
+.tribyPoint img {
+	width: 15px;
+	height: 15px;
+}
+
+.footer {
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 240px;
+	padding: 30px 0;
+	flex: 0 0 auto;
+	justify-content: center;
+}
+
+.footer button {
+	width: 40px;
+	height: 40px;
+	line-height: normal;
+	background-color: white;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 0px;
+	border-radius: 50%;
+	outline: none;
+	border-style: none;
+}
+
+.leftbtn, .rightbtn {
+	display: flex;
+}
+
+.pic {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.pic:before {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+.profile>input {
+	display: none;
+}
+
+.pic img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.userinfo {
+	margin-left: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.nickname {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.edit {
+	color: black;
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: 4px 8px;
+	cursor: pointer;
+	margin-left: 20px;
+	opacity: 0.6;
+}
+
+.coupon {
+	flex: 1 1 50%;
+	border-radius: 5px;
+	background: rgb(11, 140, 140);
+	color: white;
+	margin: 100px 0px 100px 50px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+	padding:10px 0;
+}
+
+.coupon * {
+	flex: 1 1 50%;
+	margin:0;
+}
+
+.myTribyWrap {
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.myTribyTop {
+	margin-top: 20px;
+	line-height: 12px;
+	font-size: 12px;
+	color: gray;
+	padding: 0 20px;
+}
+
+.myTribyMid {
+	line-height: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.myTribyInfoWrap {
+	display: flex;
+	cursor: pointer;
+}
+
+.myTribyThumb {
+	flex: 0 0 auto;
+	margin-right: 20px;
+	width: 120px;
+	position: relative;
+}
+
+.myTribyThumb:before {
+	content: "";
+	display: block;
+	padding-bottom: 75%;
+}
+
+.myTribyThumb img {
+	position: absolute;
+	border-radius: 5px;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.myTribyMid>a {
+	box-sizing: border-box;
+	border: 1px solid slategray;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+}
+
+.myTribyBot {
+	border-top: 1px solid lightgray;
+	display: flex;
+	justify-content: space-between;
+	line-height: 20px;
+	padding: 20px;
+}
+
+.tribyCancel a {
+	box-sizing: border-box;
+	border: 1px solid red;
+	color: red !important;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+}
+
+.hostWrap {
+	flex: 0 1 calc(50% - 30px);
+	padding: 30px 0;
+	border-bottom: 1px solid lightgray;
+	margin-right: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 22px;
+}
+
+.hostlikebtn {
+	display: flex;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+
+.hostlikebtn img {
+	width: 100%;
+	height: 100%;
+}
+
+.hostWrap>a {
+	flex: 1 1 auto;
+}
+
+.host {
+	display: flex;
+}
+
+.hostThumb {
+	width: 50px;
+	height: 50px;
+	flex: 0 0 auto;
+	overflow: hidden;
+	margin-right: 20px;
+	border-radius: 50%;
+}
+
+.hostThumb img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.hostInfo * {
+	margin: 0;
+}
+
+.hostInfo h6 {
+	color: gray;
+}
+
+.hostInfo {
+	padding-top: 5px;
+}
+
+.likeWrap {
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: 60px;
+}
+
+.writeAreview a {
+	box-sizing: border-box;
+	border: 1px solid rgb(11, 140, 140);
+	color: rgb(11, 140, 140) !important;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.myTribyDateWrap div {
+	font-size: 12px;
+}
+
+.myTribyDateWrap div span {
+	margin-right: 20px;
+}
+
+.canceled {
+	color: red;
+}
+
+.finished {
+	color: rgb(11, 140, 140);
+}
+
+.myTribyTitle * {
+	margin: 4px 0;
+}
+
+.myReviewWrap {
+	border: 1px solid rgb(11, 140, 140);
+	font-size: 18px;
+	border-radius: 5px;
+	width: 75%;
+	min-height: 100px;
+}
+
+.myReviewTop {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	font-size: 12px;
+}
+
+.myReviewContent {
+	padding: 20px;
+}
+
+.myReviewBot {
+	border-top: 1px solid rgb(11, 140, 140);
+}
+
+.rewriteReview>a {
+	box-sizing: border-box;
+	color: white !important;
+	background: rgb(11, 140, 140);
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.myCouponListWrap {
+	margin-top: 60px;
+}
+
+.myCouponWrap {
+	padding: 20px 50px;
+	border: 1px solid rgb(11, 140, 140);
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.myCouponInfo {
+	display: flex;
+	width: 400px;
+}
+
+.myCouponInfo img {
+	width: 100px;
+	height: 100px;
+}
+
+.myCouponTitle h3 span {
+	font-size: 12px;
+	color: gray;
+}
+
+.myCouponUsable {
+	box-sizing: border-box;
+	background: rgb(11, 140, 140);
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 18px;
+	border-radius: 5px;
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+}
+
+.unusableCoupon {
+	background: white;
+	border: 1px solid gray;
+	color: gray;
+}
+
+.myInfoWrap {
+	margin-top: 60px;
+}
+
+.infoInput {
+	padding: 30px 0;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+}
+
+.infoName {
+	font-weight: bold;
+	width: 80px;
+}
+
+.infoContent {
+	flex: 1 1 auto;
+	padding-left: 30px;
+}
+
+.pwChange {
+	box-sizing: border-box;
+	background: rgb(11, 140, 140);
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 18px;
+	border-radius: 5px;
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	border: 1px solid lightgray;
+}
+
+.profileSave {
+	padding-top: 40px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 240px;
+}
+
+.saveBtn {
+	background: rgb(11, 140, 140);
+	text-align: center;
+	width: 300px;
+	height: 50px;
+	border-style: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.myCategory {
+	padding-bottom: 30px;
+	border-bottom: 1px solid gray;
+}
+
+.categoryTag {
+	font-size: 15px;
+	padding: 30px 0;
+}
+
+.categoryChoice {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.categoryBtn {
+	border: 1px solid rgb(11, 140, 140);
+	border-radius: 5px;
+	background: transparent;
+	color: rgb(11, 140, 140);
+	font-size: 15px;
+	margin-top: 8px;
+	margin-right: 8px;
+	height: 40px;
+	padding: 0 15px;
+}
+
+.categoryChecked {
+	border: 1px solid rgb(11, 140, 140);
+	border-radius: 5px;
+	font-size: 15px;
+	background: rgb(11, 140, 140);
+	color: white;
+	margin-top: 8px;
+	margin-right: 8px;
+	height: 40px;
+	padding: 0 15px;
+}
+
+.pwInputWrap {
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid gray;
+	display: flex;
+	align-items: center;
+}
+
+.pwInputWrap input {
+	border-style: none;
+	width: 100%;
+	font-size: 18px;
+	padding: 0;
+}
+
+#writeReview a {
+	background-color: rgb(11, 140, 140) !important;
+	color: white !important;
+	font-weight: bold !important;
+}
+
+.myReviewWriteWrap {
+	border: 1px solid rgb(11, 140, 140);
+	font-size: 18px;
+	border-radius: 5px;
+	width: 100%;
+	min-height: 100px;
+}
+
+#reviewContent {
+	border-style: none;
+}
+
+.tribyPoint {
+	color: rgb(11, 140, 140);
+	font-weight: 600;
+}
+
+.myReviewStar img {
+	margin-top: 10px;
+	width: 24px;
+	height: 24px;
+}
+
+.reviewStar {
+	cursor: pointer;
+}
+
+.rewriteReview>.deleteReview {
+	box-sizing: border-box;
+	border: 1px solid red;
+	background: transparent;
+	color: red !important;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+}
+
+.noticelist {
+	list-style: none;
+	padding: 0;
+}
+
+.noticeTagN {
+	margin-left: 0px;
+	margin-right: 21px;
+	width: 48px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	background-color: rgb(11, 140, 140);
+	border-radius: 5px;
+	padding: 0px 6px;
+}
+
+.noticeTagE {
+	margin-left: 0px;
+	margin-right: 21px;
+	width: 48px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	background-color: rgb(60, 34, 106);
+	border-radius: 5px;
+	padding: 0px 6px;
+}
+
+.noticewrap {
+	display: flex;
+	margin: 12px 0px;
+	cursor: pointer;
+}
+
+.noticeTag, .noticedate {
+	flex: 0 0 auto;
+}
+
+.noticeTitle {
+	flex: 1 1 auto;
+}
+
+.tagWrap {
+	border-bottom: 1px solid lightgray;
+	padding: 12px 0;
+	margin-top: 30px;
+}
+
+.noticelist li {
+	border-bottom: 1px solid lightgray;
+}
+
+.noticecontent {
+	background: lightblue;
+	padding: 20px;
+}
+
+.tagWrap>span {
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.noticedate {
+	color: gray;
+}
+
+.faqtitle {
+	cursor: pointer;
+	height: 60px;
+	padding: 18px 0;
+	line-height: 24px;
+	border-bottom: 1px solid lightgray;
+}
+
+.faqsearch input {
+	flex: 1 1 auto;
+	height: 24px;
+	display: inline-block;
+	border-style: none;
+}
+
+.faqtag {
+	border-bottom: 1px solid gray;
+	padding: 20px 0;
+	overflow: auto;
+}
+
+.faqcontent {
+	display: none;
+	background: lightblue;
+	padding: 20px;
+	width: 100%;
+	min-height: 84px;
+}
+
+.faqsearch {
+	border-bottom: 1px solid black;
+	display: flex;
+	width: 100%;
+	height: 60px;
+	padding: 18px 0;
+	align-items: center;
+}
+
+.faqwrap {
+	list-style: none;
+	padding: 0;
+}
+
+.qnaListWrap {
+	width: 50%;
+	margin: 60px auto;
+}
+
+.qnaHead {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 30px;
+	border-bottom: 1px solid slategray;
+}
+
+.qnaList {
+	margin-top: 30px;
+}
+
+.QNA {
+	border: 1px solid rgb(11, 140, 140);
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+.qnaWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 140px;
+	padding: 30px;
+}
+
+.qnaTitle {
+	display: flex;
+	align-items: center;
+}
+
+.qnaName {
+	margin-left: 30px;
+}
+
+.hostProfile {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+}
+
+.hostProfile>img {
+	width: 100%;
+	height: 100%;
+}
+
+.myQnaTitle{
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.QhostName{
+	color: slategray;
+	font-size: 18px;
+}
+
+.answered>a {
+	background: rgb(11, 140, 140);
+	color: white;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.notAnswer>a {
+	border: 1px solid slategray;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.qnaHead>a {
+	background: rgb(11, 140, 140);
+	color: white;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.qDate {
+	color: slategray;
+	font-size: 15px;
+}
+
+.hostAnswer {
+	padding-top: 30px;
+	border-top: 1px solid rgb(11, 140, 140);
+	padding: 30px;
+}
+
+.aDate {
+	color: slategray;
+	font-size: 15px;
+}
+
+.qContentWrap {
+	padding: 30px;
+}
+
+.hostAnswerWrap {
+	border-top: 1px solid rgb(11, 140, 140);
+	padding: 30px;
+}
+
+.aContentHead {
+	display: flex;
+	justify-content: space-between;
+}
+
+.aContent {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.qTitle {
+	width: 100%;
+	border-style: none;
+	font-size: 18px;
+}
+.hName{
+	font-weight:bold
+}
+#qnaWrite {
+	background: rgb(11, 140, 140);
+	color: white;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-style: none;
+}
