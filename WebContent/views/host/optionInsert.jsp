@@ -53,9 +53,13 @@
 				<button class="btn btn-secondary" type="button" onclick="plus(1);">+</button></td>
 			</tr>
 			<tr>
-				<td rowspan="5">일정/시간</td>
+				<td rowspan="5">일정/시간<br>
+				<button class="btn btn-info" type="button">-</button>
+				<button class="btn btn-info" type="button">+</button>
+				</td>
 				<td height="40px"><input name="date1" type="date" required></td>
-				<td colspan="2"><input name="time1" type="time" value="21:00" step="1800" min="00:00" max="23:59" required></td>
+				<td colspan="2"><input name="time1" type="time" value="21:00" step="1800" min="00:00" max="23:59" required>
+				</td>
 			</tr>
 			<tr>
 				<td height="40px"><input name="date2" type="date" required></td>
