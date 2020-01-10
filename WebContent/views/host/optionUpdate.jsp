@@ -52,19 +52,11 @@
 		<input type="hidden" name="tNo" value="<%= tNo %>">
 		<table align="center">
 			<tr>
-				<td height="50px">최소인원</td>
-				<td><button class="btn btn-secondary" type="button" onclick="minus(0);">-</button>
-				<input type="number" id="minimumP" name="minimumP" min="1" value="<%=list.get(0).getPerson_min() %>">
-				<button class="btn btn-secondary" type="button" onclick="plus(0);">+</button></td>
-				<td height="50px">최대인원</td>
-				<td><button class="btn btn-secondary" type="button" onclick="minus(1);">-</button>
-				<input type="number" id="maximumP" name="maximumP" min="1" value="<%=list.get(0).getPerson_max() %>" step="1">
-				<button class="btn btn-secondary" type="button" onclick="plus(1);">+</button></td>
+				<td colspan="3" height="50px">일정/시간</td>
 				<td>현재<br>신청인원</td>
 				<td width="90px">예약<br>그만받기</td>
 			</tr>
 			<tr>
-			<td rowspan="<%= list.size() %>">일정/시간</td>
 			<% for(int i=0; i<list.size(); i++) { %>
 				<% if(list.get(i).getStatus().equals("E")) { %>
 				<td height="40px"><input name="date1" type="date" value="<%= list.get(i).gettDay() %>" disabled></td>

@@ -39,26 +39,25 @@ public class OptionInsertServlet extends HttpServlet {
 		int maxP = Integer.parseInt(request.getParameter("maximumP"));
 		
 		ArrayList<String> days = new ArrayList<>();
-		days.add(request.getParameter("date1"));
-		days.add(request.getParameter("date2"));
-		days.add(request.getParameter("date3"));
-		days.add(request.getParameter("date4"));
-		days.add(request.getParameter("date5"));
+		String[] day = request.getParameterValues("date");
+		
+		for(int i=0; i<day.length; i++) {
+			days.add(day[i]);
+			System.out.println(day[i]);
+		}
 		
 		ArrayList<String> times = new ArrayList<>();
-		times.add(request.getParameter("time1"));
-		times.add(request.getParameter("time2"));
-		times.add(request.getParameter("time3"));
-		times.add(request.getParameter("time4"));
-		times.add(request.getParameter("time5"));
+		String[] time = request.getParameterValues("time");
+		
+		for(int i=0; i<time.length; i++) {
+			times.add(time[i]);
+		}
 		
 		op.settId(tId);
 		op.setPerson_min(minP);
 		op.setPerson_max(maxP);
 		
 		int result = new TribyService().insertOption(op, days, times);
-		
-		System.out.println(times.get(0));
 		
 		int hNo = Integer.parseInt(request.getParameter("hNo"));
 		

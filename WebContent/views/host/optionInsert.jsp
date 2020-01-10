@@ -60,8 +60,8 @@
 				<button class="btn btn-info" type="button" onclick="dtMinus();">-</button>
 				<button class="btn btn-info" type="button" onclick="dtPlus();">+</button>
 				</td>
-				<td height="40px"><input name="date1" type="date" required></td>
-				<td colspan="2"><input name="time1" type="time" value="21:00" step="1800" min="00:00" max="23:59" required>
+				<td height="40px"><input name="date" type="date" required></td>
+				<td colspan="2"><input name="time" type="time" value="21:00" step="1800" min="00:00" max="23:59" required>
 				</td>
 			</tr>
 		</tbody>
@@ -113,8 +113,8 @@
 			
 			if($count < 5) {
 				$tr = $('<tr>');
-				$td1 = $('<td height="40px"><input name="date2" type="date" required></td>');
-				$td2 = $('<td colspan="2"><input name="time2" type="time" value="21:00" step="1800" min="00:00" max="23:59" required></td>');
+				$td1 = $('<td height="40px"><input name="date" type="date" required></td>');
+				$td2 = $('<td colspan="2"><input name="time" type="time" value="21:00" step="1800" min="00:00" max="23:59" required></td>');
 			
 				$tr.append($td1);
 				$tr.append($td2)
