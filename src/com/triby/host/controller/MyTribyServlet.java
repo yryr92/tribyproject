@@ -56,10 +56,7 @@ public class MyTribyServlet extends HttpServlet {
 		boardLimit = 9;
 		
 		maxPage = (int)Math.ceil((double)listCount / boardLimit);
-		
-		
 		startPage = (page-1)/pageLimit * pageLimit + 1;
-		
 		endPage = startPage + pageLimit -1;
 		
 		if(maxPage < endPage) {

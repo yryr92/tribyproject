@@ -25,7 +25,7 @@
 	//tr td{border:1px solid;}
 	#datePlus{float: right; margin-right:15%;}
 	//table tr:nth-child(1) td:nth-child(2){text-align:right}
-	#hideTable{}
+	//#dtTable{border:1px solid;}
 </style>
 </head>
 <body>
@@ -52,32 +52,20 @@
 				<input type="number" id="maximumP" name="maximumP" min="1" value="5" step="1">
 				<button class="btn btn-secondary" type="button" onclick="plus(1);">+</button></td>
 			</tr>
-			<tr>
+		</table><br>
+		<table align="center" id="dtTable">
+		<tbody id="dtBody">
+		<tr id="tr1">
 				<td rowspan="5">일정/시간<br>
-				<button class="btn btn-info" type="button">-</button>
-				<button class="btn btn-info" type="button">+</button>
+				<button class="btn btn-info" type="button" onclick="dtMinus();">-</button>
+				<button class="btn btn-info" type="button" onclick="dtPlus();">+</button>
 				</td>
 				<td height="40px"><input name="date1" type="date" required></td>
 				<td colspan="2"><input name="time1" type="time" value="21:00" step="1800" min="00:00" max="23:59" required>
 				</td>
 			</tr>
-			<tr>
-				<td height="40px"><input name="date2" type="date" required></td>
-				<td colspan="2"><input name="time2" type="time" value="21:00" step="1800" min="00:00" max="23:59" required></td>
-			</tr>
-			<tr>
-				<td height="40px"><input name="date3" type="date" required></td>
-				<td colspan="2"><input name="time3" type="time" value="21:00" step="1800" min="00:00" max="23:59" required></td>
-			</tr>
-			<tr>
-				<td height="40px"><input name="date4" type="date" required></td>
-				<td colspan="2"><input name="time4" type="time" value="21:00" step="1800" min="00:00" max="23:59" required></td>
-			</tr>
-			<tr>
-				<td height="40px"><input name="date5" type="date" required></td>
-				<td colspan="2"><input name="time5" type="time" value="21:00" step="1800" min="00:00" max="23:59" required></td>
-			</tr>
-		</table><br>
+		</tbody>
+		</table>
 		</div>
 		<div align="center">
 			<button type="submit" class="btn btn-info">저장</button>
@@ -119,6 +107,31 @@
 			}
 		}
 		
+		$count = 1;
+		
+		function dtPlus(){
+			
+			if($count < 5) {
+				$tr = $('<tr>');
+				$td1 = $('<td height="40px"><input name="date2" type="date" required></td>');
+				$td2 = $('<td colspan="2"><input name="time2" type="time" value="21:00" step="1800" min="00:00" max="23:59" required></td>');
+			
+				$tr.append($td1);
+				$tr.append($td2)
+				
+				$("#dtBody").append($tr);
+				$count++;	
+			} else {
+				alert("일정을 5개 이상 추가할 수 없습니다.");
+			}	
+		}
+		
+		function dtMinus(){
+			if($count != 1) {
+				$('#dtBody tr:last').remove();
+				$count--;
+			}
+		}
 	
 	</script>
 	

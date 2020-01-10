@@ -36,34 +36,23 @@ public class MyPageUpdate extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		//System.out.println("gg");
-		
+
 		request.setCharacterEncoding("utf-8");
 		
 		if(ServletFileUpload.isMultipartContent(request)) {
 			
 			int maxSize = 10*1024*1024;
-			
 			String root = request.getSession().getServletContext().getRealPath("/resources");
-			
 			String savePath = root + "/images/host/profile/";
-			
 			MultipartRequest multiRequest = new MultipartRequest(request, savePath, maxSize, "UTF-8", new MyFileRenamePolicy());
-			
 			Enumeration<String> file = multiRequest.getFileNames();
-		
 			String fileName = "";
 			
 			while(file.hasMoreElements()) {
-				
 				String name = file.nextElement();
-				
 				if(multiRequest.getFilesystemName(name) != null) {
-					
 					String originName = multiRequest.getOriginalFileName(name);
 					fileName = multiRequest.getFilesystemName(name);
-					
 				}
 			}
 

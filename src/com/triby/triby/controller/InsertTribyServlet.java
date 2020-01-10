@@ -58,7 +58,6 @@ public class InsertTribyServlet extends HttpServlet {
 			
 			while(files.hasMoreElements()) {
 				String name = files.nextElement();
-				
 				// 파일이 존재할 경우
 				if(multiRequest.getFilesystemName(name) != null) {
 					
@@ -69,7 +68,6 @@ public class InsertTribyServlet extends HttpServlet {
 					
 					originFiles.add(originName);
 					changeFiles.add(changeName);
-					
 				}
 			}
 			
@@ -107,9 +105,7 @@ public class InsertTribyServlet extends HttpServlet {
 				} else {
 					img.setiLev(2);
 				}
-				
 				list.add(img);
-				
 			}
 			
 			int result = new TribyService().insertTriby(tr, list);
